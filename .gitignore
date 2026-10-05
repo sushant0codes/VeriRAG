@@ -1,4 +1,18 @@
+# Python
 __pycache__/
 *.py[cod]
+.venv/
+venv/
+
+# Environment
+.env
+
+# Data
+data/*.pdf
+data/*.jsonl
+
+# IDE
+.vscode/
+.idea/
+
 *.egg-info/
-.pytest_cache/
