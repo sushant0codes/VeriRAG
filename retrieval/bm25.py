@@ -6,16 +6,11 @@ import json
 import re
 from dataclasses import dataclass
 from pathlib import Path
-
 import numpy as np
 from rank_bm25 import BM25Okapi
-
-
 def tokenize(text: str) -> list[str]:
     """Split text into lowercase keyword tokens for BM25."""
     return re.findall(r"\w+", text.lower())
-
-
 @dataclass(frozen=True)
 class BM25Index:
     """A BM25 model and its original Phase 1 chunk records."""
