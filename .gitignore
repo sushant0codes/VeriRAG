@@ -16,3 +16,10 @@ data/*.jsonl
 .idea/
 
 *.egg-info/
+
+# Generated caches and build artifacts
+Microsoft/
+.pytest_cache/
+build/
+dist/
+.coverage
