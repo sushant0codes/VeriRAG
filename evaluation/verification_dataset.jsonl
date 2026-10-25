@@ -1,0 +1,9 @@
+{"id":"v01","claim":"Net income for 2025 was $112,010 million.","evidence_chunk_ids":["apple_annual_report_c0049"],"expected_label":"supported","label_status":"draft_human_review"}
+{"id":"v02","claim":"Basic earnings per share for 2025 was $7.49.","evidence_chunk_ids":["apple_annual_report_c0049"],"expected_label":"supported","label_status":"draft_human_review"}
+{"id":"v03","claim":"Apple had approximately 166,000 full-time equivalent employees as of September 27, 2025.","evidence_chunk_ids":["apple_annual_report_c0008"],"expected_label":"supported","label_status":"draft_human_review"}
+{"id":"v04","claim":"Net income for 2025 was $93,736 million.","evidence_chunk_ids":["apple_annual_report_c0049"],"expected_label":"unsupported","label_status":"draft_human_review"}
+{"id":"v05","claim":"Apple's common stock trades under the symbol MSFT.","evidence_chunk_ids":["apple_annual_report_c0035"],"expected_label":"unsupported","label_status":"draft_human_review"}
+{"id":"v06","claim":"Apple had 200,000 full-time equivalent employees as of September 27, 2025.","evidence_chunk_ids":["apple_annual_report_c0008"],"expected_label":"unsupported","label_status":"draft_human_review"}
+{"id":"v07","claim":"Apple will release a foldable iPhone in 2026.","evidence_chunk_ids":["apple_annual_report_c0004"],"expected_label":"uncertain","label_status":"draft_human_review"}
+{"id":"v08","claim":"Apple's 2030 net income will be $200,000 million.","evidence_chunk_ids":["apple_annual_report_c0049"],"expected_label":"uncertain","label_status":"draft_human_review"}
+{"id":"v09","claim":"Apple's electric-vehicle revenue in 2025 was $1 billion.","evidence_chunk_ids":["apple_annual_report_c0038"],"expected_label":"uncertain","label_status":"draft_human_review"}
