@@ -11,7 +11,7 @@ VeriRAG is a compact, citation-aware retrieval-augmented generation (RAG) projec
 - Claim-level `supported`, `unsupported`, or `uncertain` verification. Unsupported requires direct contradictory evidence; missing evidence remains uncertain.
 
 ```mermaid
-flowchart LR
+flowchart TB
     pdf[PDF report] --> ingest[Ingestion and cleanup]
     ingest --> chunk[Chunking with page metadata]
     chunk --> chunks[Citation-ready JSONL chunks]
