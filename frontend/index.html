@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>VeriRAG Workspace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <aside>
+    <a class="brand" href="/"><i></i>VeriRAG</a>
+    <p class="nav-label">Workspace</p>
+    <a class="nav active" href="#ask">Ask a report</a>
+    <a class="nav" href="#evidence">Sources</a>
+    <a class="nav" href="#upload">Add a PDF</a>
+    <div class="aside-foot"><span>Local workspace</span><small>Your files stay on this computer.</small></div>
+  </aside>
+  <main>
+    <header>
+      <div><h1>Ask your report</h1><p id="source-name">Loading active document…</p></div>
+      <label class="upload-top" for="file-input">Add PDF<input id="file-input" type="file" accept="application/pdf"></label>
+    </header>
+    <section class="ask-grid" id="ask">
+      <div class="question-panel">
+        <label for="question">What would you like to know?</label>
+        <textarea id="question" rows="4" placeholder="For example: What were the main risks this year?"></textarea>
+        <div class="suggestions"><span>Suggested questions</span><div id="suggestion-list"></div></div>
+        <button id="ask-button">Find answer</button>
+        <p class="status" id="status" role="status">Ask a question to get started.</p>
+      </div>
+      <div class="answer-panel">
+        <div class="panel-head"><span>Answer</span><b id="answer-mode">Waiting</b></div>
+        <p id="answer">Ask a question and VeriRAG will show an answer with the most useful passages from the report.</p>
+        <div class="answer-meta"><span id="answer-source">No document selected</span><span id="answer-count">No sources yet</span></div>
+      </div>
+    </section>
+    <section class="evidence-section" id="evidence">
+      <div class="section-title"><div><h2>Supporting passages</h2></div><p>Use these page references to check the answer in the original report.</p></div>
+      <div id="evidence-list" class="evidence-list"><p class="empty">Relevant passages will appear here.</p></div>
+    </section>
+    <section class="upload-section" id="upload">
+      <div><h2>Use another report</h2><p>Upload a text-readable PDF (up to 25 MB) to ask questions about it. It is kept only while this workspace is running.</p></div>
+      <label class="drop-zone" for="file-input"><strong>Choose a PDF</strong><span>or drop one here</span><small>PDF only · stored temporarily on this computer</small></label>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

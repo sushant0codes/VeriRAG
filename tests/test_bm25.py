@@ -65,3 +65,28 @@ def test_bm25_search_rejects_invalid_top_k(tmp_path) -> None:
 
     with pytest.raises(ValueError, match="top_k"):
         search("revenue", build_index(chunks_path), top_k=0)
+
+
+def test_bm25_prefers_a_focused_sentence_for_a_multi_term_question(tmp_path) -> None:
+    chunks_path = tmp_path / "chunks.jsonl"
+    rows = [
+        {
+            "chunk_id": "report_c0001",
+            "document_id": "report",
+            "text": "Fiscal results and year-end reporting are included in this table.",
+            "pages": [18],
+            "metadata": {"page_start": 18, "page_end": 18, "source": "report.pdf"},
+        },
+        {
+            "chunk_id": "report_c0002",
+            "document_id": "report",
+            "text": "The fiscal year ends on the last Saturday of September.",
+            "pages": [4],
+            "metadata": {"page_start": 4, "page_end": 4, "source": "report.pdf"},
+        },
+    ]
+    chunks_path.write_text("\n".join(json.dumps(row) for row in rows) + "\n", encoding="utf-8")
+
+    results = search("What is the fiscal-year end?", build_index(chunks_path), top_k=2)
+
+    assert results[0]["chunk_id"] == "report_c0002"
